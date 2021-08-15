@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
+        <!-- When we define an item in a 'group' like the 4 items
+        below then the items has hold property i.e. even if
+        we close the navigation drawer the item is still
+        selected and once we open it back, we can see that
+        this item is still selected -->
         <item
             android:title="Inbox"
             android:id="@+id/inbox_id"
@@ -20,6 +25,8 @@
     </group>
 
     <item android:title="Sub-Header">
+        <!-- When we define an item in a Navigation Drawer it acts
+        like a button, just like the 3 items below  -->
         <menu>
             <item
                 android:title="All Mails"
