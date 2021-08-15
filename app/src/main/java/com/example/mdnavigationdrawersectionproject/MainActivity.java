@@ -41,6 +41,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
     }
 
+    /*
+    When Navigation Drawer is closed and then we press the back button then the activity must close.
+    However, if the Navigation Drawer is open and then we press the back button then we except the
+    Navigation Drawer to be closed, but this does not happen by default. Hence, we must code this
+    functionality in the activity class in the onBackPressed() method.
+    */
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else {
+            super.onBackPressed();
+        }
+    }
+
     @SuppressLint("NonConstantResourceId") // For switch case warning
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
