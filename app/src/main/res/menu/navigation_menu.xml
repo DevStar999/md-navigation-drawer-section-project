@@ -22,7 +22,7 @@
     <item android:title="Sub-Header">
         <menu>
             <item
-                android:title="All mails"
+                android:title="All Mails"
                 android:id="@+id/all_mails_id"
                 android:icon="@drawable/all_mails"/>
             <item
